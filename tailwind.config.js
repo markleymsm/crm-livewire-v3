@@ -1,18 +1,19 @@
-import forms from '@tailwindcss/forms'
-import typography from '@tailwindcss/typography'
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
+    // You will probably also need those lines
+    "./resources/**/**/*.blade.php",
+    "./resources/**/**/*.js",
+    "./app/View/Components/**/**/*.php",
+    "./app/Livewire/**/**/*.php",
+
+    // Add mary
+    "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
   ],
   theme: {
     extend: {},
   },
-  plugins: [
-    forms,
-    typography,
-  ],
-}
 
+  // Add daisyUI
+  plugins: [require("daisyui")]
+}
