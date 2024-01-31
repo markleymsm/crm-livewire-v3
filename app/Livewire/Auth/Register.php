@@ -9,10 +9,10 @@ use Livewire\Component;
 
 class Register extends Component
 {
-    #[Rule(['required'])]
+    #[Rule(['required', 'max:255'])]
     public ?string $name = null;
 
-    #[Rule(['required'])]
+    #[Rule(['required', 'max:255', 'email', 'confirmed'])]
     public ?string $email = null;
 
     public ?string $email_confirmation = null;
