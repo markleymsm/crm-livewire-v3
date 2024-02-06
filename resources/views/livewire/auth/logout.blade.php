@@ -1,3 +1,3 @@
 <div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
+    <x-button icon="o-power" class="btn-circle btn-ghost btn-xs" wire:click="logout"/>
 </div>
