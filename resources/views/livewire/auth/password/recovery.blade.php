@@ -1,3 +1,8 @@
 <div>
-    <x-input label="E-mail" wire:model="email" hint="It will omit error here" omit-error />
+    @if ($message)
+        <span >
+            You will receive an email with the password recovery link.
+        </span>
+        
+    @endif
 </div>
