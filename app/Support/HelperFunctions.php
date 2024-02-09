@@ -1,8 +1,16 @@
 <?php
 
-function obfuscate_email(string $email)
+function obfuscate_email(?string $email = null): string
 {
+    if (!$email) {
+        return '';
+    }
+
     $email = explode('@', $email);
+
+    if (sizeof($email) !== 2) {
+        return '';
+    }
 
     $username = $email[0];
     $domain   = $email[1];
